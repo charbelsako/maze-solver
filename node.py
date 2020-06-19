@@ -3,6 +3,9 @@ class Node(object):
         self.title = title
         self.i = str(i)
         self.j = str(j)
+        self.f = 0
+        self.g = 0
+        self.h = 0
         # no neighbors at first
         # TODO: use the efficient neighbor lookup?
         self.neighbors = []

@@ -1,0 +1,8 @@
+3-talk about Using a list vs using a priority queue 
+    When we choose the node with the lowest "f" value we could either use a list or a priority queue. With the list we get a complexity of O(n) however, with a priority queue that can be decreased to O(log n).
+    
+2-talk about the algorithm 
+    The a* algorithm tries to solve what DFS or depth first search can't do. The algorithm makes educated guesses on where to go next based on 2 things how long it took me to get to this place, and how long will it take me to get to the end. Since we don't know the latter we have to take a guess, here I am using the distance heuristic. We add those together and call it "f" then we choose the node with the lowest f score.     
+
+1-generating arrays. 
+    First I'd like to mention briefly a difficulty that came up which was generating arrays. There is this easy way (show demo) but it doesn't work. That is because it is copying the pointer of the value into other places.  
