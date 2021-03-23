@@ -3,9 +3,10 @@ class Node(object):
         self.title = title
         self.i = str(i)
         self.j = str(j)
-        self.f = 0
-        self.g = 0
+        self.f = float('inf')
+        self.g = float('inf')
         self.h = 0
+        self.previous = None
         # no neighbors at first
         # TODO: use the efficient neighbor lookup?
         self.neighbors = []
@@ -14,5 +15,8 @@ class Node(object):
         return '<' + self.title + '>'
 
     def __repr__(self):
-        character = 'W' if self.title is '#' else 'O'
+        # character = 'W' if self.title is '#' else 'O'
         return '<' + self.i + ' ' + self.j + ' ' + self.title + ', ' + str(len(self.neighbors))+'>'
+
+    def __lt__(self, other):
+        return (self.f < other.f)
